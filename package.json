@@ -18,6 +18,8 @@
     "loopback-datasource-juggler": "^2.39.0",
     "moment": "^2.17.1",
     "node-red": "^0.15.2",
+    "node-red-dashboard": "^2.2.1",
+    "node-red-node-mongodb": "0.0.11",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {

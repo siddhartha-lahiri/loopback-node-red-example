@@ -1,0 +1,35 @@
+[
+    {
+        "id": "344780d0.6fe8c",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "38567c90.9a5dd4",
+        "type": "debug",
+        "z": "344780d0.6fe8c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 275,
+        "y": 308,
+        "wires": []
+    },
+    {
+        "id": "cb122199.a4589",
+        "type": "http in",
+        "z": "344780d0.6fe8c",
+        "name": "",
+        "url": "qqq",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 65,
+        "y": 308,
+        "wires": [
+            [
+                "38567c90.9a5dd4"
+            ]
+        ]
+    }
+]
