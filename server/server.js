@@ -22,6 +22,7 @@ boot(app, __dirname, function(err) {
     if (require.main === module) {
         var server = app.start();
         var settings = {
+          flowFile: "flows_eventStoreExample.json",
           flowFilePretty: true,
           httpAdminRoot:"/admin",
           httpNodeRoot: "/",
