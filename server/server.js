@@ -16,6 +16,7 @@ app.start = function() {
     }
   });
 };
+
 boot(app, __dirname, function(err) {
     if (err) throw err;
     if (require.main === module) {
@@ -23,9 +24,8 @@ boot(app, __dirname, function(err) {
         var settings = {
           flowFilePretty: true,
           httpAdminRoot:"/admin",
-          httpNodeRoot: "/api",
-          userDir:"server/nodered/",
-          nodesDir:"server/nodered/nodes/",
+          httpNodeRoot: "/",
+          userDir:"/data",
           functionGlobalContext: {
             fs:require('fs'),
             moment:require('moment'),

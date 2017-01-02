@@ -1,28 +1,27 @@
-FROM node:boron-alpine
+FROM lahirs2/alpine-node-python:latest
 
 MAINTAINER Siddhartha Lahiri "siddhartha.lahiri@gmail.com"
-
-# Install bash
-RUN apk add --no-cache bash gawk sed grep bc coreutils
 
 # application port
 EXPOSE 3000
 
 # Home directory for Node-RED application source code.
-RUN mkdir -p /usr/src/node-red
+RUN mkdir /home/node-red
+WORKDIR /home/node-red
 
-WORKDIR /usr/src/node-red
+COPY . /home/node-red
 
-COPY . /usr/src/node-red
-
-# Add node-red user so we aren't running as root.
-RUN adduser -h /usr/src/node-red -D -H node-red \
-    && chown -R node-red:node-red /usr/src/node-red
+RUN addgroup node-red \
+    && adduser -h /home/node-red -s /bin/sh -D -G node-red node-red \
+    && mkdir /data \
+    && chown -R node-red:node-red /data \
+    && chown -R node-red:node-red /home/node-red
 
 USER node-red
+VOLUME /data
 
 # Install app dependencies
-
-RUN npm install
+RUN npm config set loglevel warn
+RUN npm install --quiet --unsafe-perm
 
 CMD [ "npm", "start" ]
