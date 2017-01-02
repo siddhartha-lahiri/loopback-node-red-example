@@ -15,7 +15,6 @@
     "loopback": "^2.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^2.4.0",
-    "loopback-connector-nodes-for-Node-RED": "git+https://github.com/EdgeVerve/loopback-connector-nodes-for-Node-RED.git",
     "loopback-datasource-juggler": "^2.39.0",
     "moment": "^2.17.1",
     "node-red": "^0.15.2",
@@ -26,9 +25,9 @@
     "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/slahiri/loopback-node-red-example"
   },
-  "license": "UNLICENSED",
-  "description": "loopback-red"
+  "license": "MIT",
+  "description": "loopback-node-red-example"
 }
