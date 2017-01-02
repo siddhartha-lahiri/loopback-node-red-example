@@ -1,0 +1,48 @@
+[
+    {
+        "id": "95072a80.bf09e8",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "675e4a62.346654",
+        "type": "http in",
+        "z": "95072a80.bf09e8",
+        "name": "",
+        "url": "/hello",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 81,
+        "y": 198,
+        "wires": [
+            [
+                "708323d2.c07aec"
+            ]
+        ]
+    },
+    {
+        "id": "3e528f52.d474",
+        "type": "http response",
+        "z": "95072a80.bf09e8",
+        "name": "",
+        "x": 358,
+        "y": 291,
+        "wires": []
+    },
+    {
+        "id": "708323d2.c07aec",
+        "type": "function",
+        "z": "95072a80.bf09e8",
+        "name": "",
+        "func": "mgg.payload = {\n    \"hello\": \"world\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 305,
+        "wires": [
+            [
+                "3e528f52.d474"
+            ]
+        ]
+    }
+]
